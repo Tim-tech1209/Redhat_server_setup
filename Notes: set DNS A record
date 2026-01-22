@@ -1,0 +1,33 @@
+## YOU CAN'T BUY A DOMAIN IN AZURE!!!
+## the DNS zones in Azure is just a place that you can link your domain that you but somewhere else to your VM in Azure.
+
+
+## CHECK YOUR NAMECHEAP/DOMAIN LIST/**YOUR DOMAIN**/ADVANCED DNS
+## ADD AN A RECORD, AND CHANGE TTL TO 60, NOT AUTOMATIC.
+
+## USE DIG COMMAND WHEN YOU ARE NOT SURE WHETHER YOU GOT YOUR DOMAIN REGISTER RIGHT OR NOT.
+## THE RESULT OF DIG SHOULD BE RIGHT LIKE BELOW.
+
+  [root@R1 ~]# dig **YOUR_DOMAIN.com**
+
+  ; <<>> DiG 9.16.23-RH <<>> **YOUR_DOMAIN.com** 
+  ;; global options: +cmd  
+  ;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 47906    
+
+  ;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1    
+
+  ;; OPT PSEUDOSECTION:
+  ; EDNS: version: 0, flags:; udp: 1224
+  ; COOKIE: f1fcbfe8fb4be4d6 (echoed)
+  ;; QUESTION SECTION:
+  ;**YOUR_DOMAIN.com**.             IN      A
+
+  ;; AUTHORITY SECTION:
+  **YOUR_DOMAIN.com**.      300     IN      SOA     dns1.registrar-servers.com. hostmaster.registrar-servers.com. 1769????88 43200 3600 604800 3601
+
+  ;; Query time: 125 msec
+  ;; SERVER: 168.63.129.16#53(168.63.129.16)
+  ;; WHEN: Thu Jan 22 14:41:48 UTC 2026
+  ;; MSG SIZE  rcvd: 128
+
+## YOU ONLY NEED TO FOCUS ON "status" and "AUTHORITY SECTION". AS LONG AS THEY ARE GOOD, YOU JUST NEED TO WAIT FOR SERVERL MINUTES.
