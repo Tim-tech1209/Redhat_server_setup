@@ -1,0 +1,16 @@
+## Add new port rule at VM/Networking/Networking setting
+Src * Dst * port 80/443 protocol TCP
+
+## install httpd
+dnf install httpd -y
+
+## setup httpd
+systemctl start httpd
+systemctl enable httpd
+systemctl status httpd  -> if it shows all good here, you could have seen the testpage with your public IP address.
+
+## add DNS record at /DNS zones/you domain/record sets/+Add
+## you can't buy a domain in Azure. Azure is the place to manage it!
+
+## setup CA
+
