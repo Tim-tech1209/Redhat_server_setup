@@ -1,4 +1,5 @@
 ## add new port rule at **Azure_portal**/VM/Networking/Networking_setting
+## make sure that you are adding INBOUND NSG.
 Src * Dst * port 80/443 protocol TCP
 
 ## add firewall rules.
