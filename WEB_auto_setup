@@ -38,9 +38,7 @@ while true; do
         echo ""
         continue
     fi
-    else
         break
-    fi
 done
 
 echo "Setting $DOMAIN ... please wait ..."
