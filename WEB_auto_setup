@@ -49,9 +49,10 @@ systemctl start httpd
 systemctl enable httpd
 
 # Change Firewall to allow HTTP and HTTPS
-firewall-cmd --permanent --add-service=http
-firewall-cmd --permanent --add-service=https
-firewall-cmd --reload
+# RHEL10 cancelled "firewall-cmd"
+# firewall-cmd --permanent --add-service=http
+# firewall-cmd --permanent --add-service=https
+# firewall-cmd --reload
 
 # Create document root
 mkdir -p /var/www/html/main-site
