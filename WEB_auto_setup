@@ -15,9 +15,11 @@ if [ "$EUID" -ne 0 ]; then
     exit 1
 fi
 
-# 获取域名
+# aquire the Domain_Name
+echo "++++++++++++++++++++++++++++++++++++"
 echo "please input your domain name (e.g., example.com)"
 echo "if you want to quit, type 'quit', 'exit', or 'q'"
+echo "++++++++++++++++++++++++++++++++++++"
 echo ""
 
 while true; do
