@@ -1,0 +1,11 @@
+#!/bin/bash
+# ssh_pubkey_server.sh
+
+hostname=$(hostname)
+read -p "please input the remote server IP  : " remote_server
+
+echo "The remote server is: $remote_server"
+
+
+ssh-keygen -t rsa -b 4096 -C "$hostname" -f ~/.ssh/"$hostname".pem -N ""
+ssh-copy-id -i ~/.ssh/"$hostname".pub user@"$remote_server"
