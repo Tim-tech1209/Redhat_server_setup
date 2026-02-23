@@ -26,3 +26,6 @@
 #### XAPI is a high-performance toolstack designed for enterprise use, capable of managing large-scale systems where multiple Xen hosts are operational. While Citrix Hypervisor provides a GUI called XenCenter, the xe command allows for detailed management via the CLI.
 
 #### Furthermore, XAPI can be installed and operated using the xe command on standard Linux distributions, not just on Citrix Hypervisor.
+
+
+
